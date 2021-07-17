@@ -1,0 +1,14 @@
+<table>
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>Nom</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let cat of allCats">
+            <td data-column="id">{{cat.id}}</td>
+            <td data-column="nom">{{cat.name}}</td>
+        </tr>
+    </tbody>
+</table>

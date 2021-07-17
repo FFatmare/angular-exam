@@ -1,0 +1,115 @@
+{
+  "products": [
+    {
+      "name": "aaa",
+      "category": "1",
+      "price": "99",
+      "id": 1
+    },
+    {
+      "name": "fffqqq1111",
+      "category": "1",
+      "price": "888",
+      "id": 3
+    },
+    {
+      "name": "azdazd",
+      "category": "3",
+      "price": "111",
+      "id": 4
+    },
+    {
+      "name": "eaze",
+      "category": "2",
+      "price": "111",
+      "id": 5
+    },
+    {
+      "name": "dazda",
+      "category": "1",
+      "price": "111",
+      "id": 6
+    },
+    {
+      "name": "jknkjh",
+      "category": "1",
+      "price": "7777",
+      "id": 7
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "eee"
+    },
+    {
+      "name": "jkhkjh",
+      "id": 2
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Fekher",
+      "lastName": "Fourati",
+      "email": "admin@gmail.com",
+      "phoneNumber": "44155359",
+      "password": "password",
+      "role": "ADMIN"
+    },
+    {
+      "id": 2,
+      "firstName": "Shadha",
+      "lastName": "Ouni",
+      "email": "aa@gmail.com",
+      "phoneNumber": "52841292",
+      "password": "password",
+      "role": "CLIENT"
+    },
+    {
+      "id": 3,
+      "firstName": "Hamdy",
+      "lastName": "Dammak",
+      "email": "bb@gmail.com",
+      "phoneNumber": "1111111",
+      "password": "password",
+      "role": "CLIENT"
+    },
+    {
+      "id": 4,
+      "firstName": "Ramzi",
+      "lastName": "Gharbi",
+      "email": "cc@gmail.com",
+      "phoneNumber": "2222222",
+      "password": "password",
+      "role": "CLIENT"
+    },
+    {
+      "firstName": "qq",
+      "lastName": "qq",
+      "email": "qq@gmail.com",
+      "phoneNumber": "000",
+      "password": "password",
+      "role": "CLIENT",
+      "id": 5
+    },
+    {
+      "firstName": "cc",
+      "lastName": "ccc",
+      "email": "cc11@gmail.com",
+      "phoneNumber": "11111",
+      "password": "cc11",
+      "role": "CLIENT",
+      "id": 6
+    },
+    {
+      "firstName": "furat",
+      "lastName": "fekher",
+      "email": "fekherf@gmail.com",
+      "phoneNumber": "33333",
+      "password": "1234",
+      "role": "PROVIDER",
+      "id": 7
+    }
+  ]
+}

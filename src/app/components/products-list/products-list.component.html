@@ -1,0 +1,23 @@
+<div class="row" style="padding: 1rem;">
+    <div *ngFor="let prod of posts" class="col-md-3 mb-4">
+        <div class="products">
+            <div class="product-img" style="display: flex;
+            justify-content: center;"><img
+                    src="../../../assets/lancement-de-produit.png"
+                    alt="" style="max-width: 10rem;"/></div>
+            <div class="product-desc">
+                <a *ngIf="currentUser?.role=='ADMIN'" [routerLink]="['/edit-product', prod.id]">modifier</a>
+                <a *ngIf="currentUser?.role=='ADMIN'" (click)="deleteProduct(prod.id)" [routerLink]="['/products']" style="margin-left: 0.5rem;">supprimer</a>
+                <div class="product-name"><a >
+                        <h4>{{prod.name}}</h4>
+                    </a></div>
+                <div class="product-rating"><img
+                        src="https://multifix24.es/wp-content/uploads/2019/03/multifix24-5-estrellas.png"
+                        alt="" /></div>
+                <div class="product-price">
+                    <h5>${{prod.price}}</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,67 @@
+<section>
+  
+    <div class="box">
+      
+      <div class="square" style="--i:0;"></div>
+      <div class="square" style="--i:1;"></div>
+      <div class="square" style="--i:2;"></div>
+      <div class="square" style="--i:3;"></div>
+      <div class="square" style="--i:4;"></div>
+      <div class="square" style="--i:5;"></div>
+      
+     <div class="container"> 
+      <div class="form"> 
+        <h2>S'inscrire</h2>
+        <form (ngSubmit)="signIn()" [formGroup]="loginForm">
+          <div class="inputBx">
+            <input type="text" placeholder="Nom" formControlName="lastName" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" class="form-control">
+            <img src="https://www.flaticon.com/svg/static/icons/svg/709/709699.svg" alt="user">    
+            <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+                <div *ngIf="f.lastName.errors.required">Nom est requis</div>
+            </div>      
+          </div>
+          <div class="inputBx">
+            <input type="text" placeholder="Prénom" formControlName="firstName" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" class="form-control">
+            <img src="https://www.flaticon.com/svg/static/icons/svg/709/709699.svg" alt="user">    
+            <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                <div *ngIf="f.firstName.errors.required">Prénom est requis</div>
+            </div>      
+          </div>
+          <div class="inputBx">
+            <input type="tel" placeholder="Numéro télephone" formControlName="phoneNumber" [ngClass]="{ 'is-invalid': submitted && f.phoneNumber.errors }" class="form-control">
+            <img src="https://www.flaticon.com/svg/static/icons/svg/709/709699.svg" alt="user">    
+            <div *ngIf="submitted && f.phoneNumber.errors" class="invalid-feedback">
+                <div *ngIf="f.phoneNumber.errors.required">Numéro de télephone est requis</div>
+            </div>      
+          </div>
+          <div class="inputBx">
+            <input type="email" placeholder="Email" formControlName="email" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" class="form-control">
+            <img src="https://www.flaticon.com/svg/static/icons/svg/709/709699.svg" alt="user">    
+            <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                <div *ngIf="f.email.errors.required">Email est requis</div>
+                <div *ngIf="f.email.errors.email">Le courrier doit être une adresse e-mail valide</div>
+            </div>      
+          </div>
+          
+          <div class="inputBx password">
+            <input id="password-input" placeholder="Mot de passe" formControlName="password" type="password" name="password" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" class="form-control">
+            <img src="https://www.flaticon.com/svg/static/icons/svg/1828/1828471.svg" alt="lock">
+            <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                <div *ngIf="f.password.errors.required">Mot de passe est requis</div>
+            </div>
+          </div>
+          <div class="inputBx password">
+            <input id="password-conf-input" placeholder="Confirmation mot de passe" formControlName="passwordConfirmation" type="password" name="password" [ngClass]="{ 'is-invalid': submitted && f.passwordConfirmation.errors }" class="form-control">
+            <img src="https://www.flaticon.com/svg/static/icons/svg/1828/1828471.svg" alt="lock">
+            <div *ngIf="submitted && f.passwordConfirmation.errors" class="invalid-feedback">
+                <div *ngIf="f.passwordConfirmation.errors.required">Confirmation mot de passe est requise</div>
+            </div>
+          </div>
+          <button type="submit">S'inscrire</button>
+        </form>
+        <p>Vous avez déja un compte? <a href="/login">Se connecter</a></p>
+      </div>
+    </div>
+      
+    </div>
+  </section>

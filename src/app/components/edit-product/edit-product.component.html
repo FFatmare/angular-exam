@@ -1,0 +1,29 @@
+<div class="container">  
+    <form id="contact" (ngSubmit)="editProduct()" [formGroup]="productForm">
+      <h3>Modifir le prduit</h3>
+      <fieldset>
+        <input placeholder="Nom du produit" type="text" formControlName="name" [ngClass]="{ 'is-invalid': submitted && f.name.errors }" class="form-control" tabindex="1" required autofocus>
+        <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+          <div *ngIf="f.name.errors.required">nom est requis</div>
+      </div>
+      </fieldset>
+      <fieldset>
+        <input placeholder="Prix" type="text" formControlName="price" [ngClass]="{ 'is-invalid': submitted && f.price.errors }" class="form-control" tabindex="2" required>
+        <div *ngIf="submitted && f.price.errors" class="invalid-feedback">
+          <div *ngIf="f.price.errors.required">prix est requis</div>
+      </div>
+      </fieldset>
+      <fieldset>
+        <select name="cat" id="categ" tabindex="3" required formControlName="category" [ngClass]="{ 'is-invalid': submitted && f.category.errors }" class="form-control" style="width: 100%;">
+          <option value="">Choisir une catégorie</option>
+          <option *ngFor="let cat of cats" [value]="cat.id">{{cat.name}}</option>
+        </select>
+        <div *ngIf="submitted && f.category.errors" class="invalid-feedback">
+          <div *ngIf="f.category.errors.required">catégorie est requise</div>
+      </div>
+      </fieldset>
+      <fieldset>
+        <button type="submit" >Modifier</button>
+      </fieldset>
+    </form>
+  </div>

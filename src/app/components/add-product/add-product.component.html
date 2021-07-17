@@ -1,0 +1,30 @@
+<div class="container">  
+    <form id="contact" #f="ngForm">
+      <h3>Ajouter un prduit</h3>
+      <fieldset>
+        <input placeholder="Nom du produit" type="text" name="name" [(ngModel)]="product.name" #i="ngModel" class="form-control" tabindex="1" required autofocus>
+        <div *ngIf="i.touched && i.invalid" class="alert alert-danger">
+          <div *ngIf="i.errors.required">nom est requis</div>
+      </div>
+      </fieldset>
+      <fieldset>
+        <input placeholder="Prix" type="text" name="price" [(ngModel)]="product.price" #t="ngModel" class="form-control" tabindex="2" required pattern="[0-9]+$">
+        <div *ngIf="t.touched && t.invalid" class="alert alert-danger">
+          <div *ngIf="t.errors.required">prix est requis</div>
+          <div *ngIf="t.errors.pattern">prix doit étre numérique</div>
+      </div>
+      </fieldset>
+      <fieldset>
+        <select name="cat" id="categ" tabindex="3" required name="category" [(ngModel)]="product.category" #c="ngModel" class="form-control" required style="width: 100%;">
+          <option value="">Choisir une catégorie</option>
+          <option *ngFor="let cat of cats" [value]="cat.id">{{cat.name}}</option>
+        </select>
+        <div *ngIf="c.touched && c.invalid" class="alert alert-danger">
+          <div *ngIf="c.errors.required">catégorie est requise</div>
+      </div>
+      </fieldset>
+      <fieldset>
+        <button type="submit" (click)="createProduct(f)" >Ajouter</button>
+      </fieldset>
+    </form>
+  </div>
